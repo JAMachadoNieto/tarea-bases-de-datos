@@ -8,6 +8,12 @@ package classes;
  *
  * @author leisy
  */
-public class PostgreSQLJDBC {
-    
+public class ModificacionPostraduccional {
+    public String tipo;
+    public String posicion;
+
+    public ModificacionPostraduccional(String tipo, String posicion) {
+        this.tipo = tipo;
+        this.posicion = posicion;
+    }
 }
