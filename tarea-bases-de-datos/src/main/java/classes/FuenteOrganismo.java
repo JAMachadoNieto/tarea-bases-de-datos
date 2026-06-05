@@ -9,10 +9,11 @@ package classes;
  * @author leisy
  */
 public class FuenteOrganismo {
+    public int id;
     public String nombreCientifico;
     public String reino;
 
-    public FuenteOrganismo(String nombreCientifico, String reino) {
+    public FuenteOrganismo(int id, String nombreCientifico, String reino) {
         this.nombreCientifico = nombreCientifico;
         this.reino = reino;
     }

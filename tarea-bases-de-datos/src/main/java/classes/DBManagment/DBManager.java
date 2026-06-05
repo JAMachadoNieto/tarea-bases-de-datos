@@ -55,16 +55,15 @@ public class DBManager {
             while(rs.next()){
                 Peptido pep = new Peptido(
                     rs.getString("id"), 
-                    rs.getString("sequence"), 
+                    rs.getString("secuencia"), 
+                    rs.getString("nombre_principal"), 
                     rs.getInt("longitud"), 
-                    rs.getDouble("pero_molecular"),
+                    rs.getDouble("peso_molecular"),
                     rs.getInt("carga_neta"),
                     rs.getDouble("hidrofobicidad"),
                     rs.getBoolean("es_natural"),
                     rs.getString("estado_verificacion"),
-                    rs.getString("nombre_alternativo"), 
-                    rs.getString("nombreCientifico"), 
-                    rs.getString("reino")
+                    rs.getString("organismo_fuente")
                 );
                 pepList.add(pep);
             }
