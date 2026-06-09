@@ -340,15 +340,20 @@ public class AddPeptidoDialog extends javax.swing.JDialog {
     }//GEN-LAST:event_hidrofobicidadTextFieldMouseClicked
 
     private void confirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmButtonActionPerformed
-        Peptido newPep = new Peptido(secuenciaTextField.getText(),
-            nameTextField.getText(),
-            Double.parseDouble(pesoTextField.getText()),
-            Integer.parseInt(cargaTextField.getText()),
-            Double.parseDouble(hidrofobicidadTextField.getText()),
-            naturalCheckBox.isSelected(),
-            states.get(stateComboBox.getSelectedIndex()),
-            (organismoComboBox.getSelectedIndex()+1) + ""
-        );
+        Peptido newPep = null;
+        try{
+            newPep = new Peptido(secuenciaTextField.getText(),
+                nameTextField.getText(),
+                Double.parseDouble(pesoTextField.getText()),
+                Integer.parseInt(cargaTextField.getText()),
+                Double.parseDouble(hidrofobicidadTextField.getText()),
+                naturalCheckBox.isSelected(),
+                states.get(stateComboBox.getSelectedIndex()),
+                (organismoComboBox.getSelectedIndex()+1) + ""
+            );
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage(), "Error de formato", JOptionPane.ERROR_MESSAGE);
+        }
         try {
             dbMan.ExecuteInsertQuery(newPep);
             this.dispose();
