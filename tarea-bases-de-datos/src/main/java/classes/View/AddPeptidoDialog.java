@@ -81,7 +81,7 @@ public class AddPeptidoDialog extends javax.swing.JDialog {
         jPanel1.setForeground(new java.awt.Color(16, 18, 17));
 
         tittleLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        tittleLabel.setText("Introduzca la informacion del nuevo peptido");
+        tittleLabel.setText("Introduzca la información del nuevo péptido");
 
         nameTextFieldLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         nameTextFieldLabel.setForeground(new java.awt.Color(41, 40, 30));
@@ -89,7 +89,12 @@ public class AddPeptidoDialog extends javax.swing.JDialog {
 
         nameTextField.setBackground(new java.awt.Color(220, 197, 166));
         nameTextField.setForeground(new java.awt.Color(41, 40, 30));
-        nameTextField.setText("Nombre del peptido");
+        nameTextField.setText("Nombre del péptido");
+        nameTextField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                nameTextFieldFocusGained(evt);
+            }
+        });
         nameTextField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 nameTextFieldMouseClicked(evt);
@@ -103,7 +108,12 @@ public class AddPeptidoDialog extends javax.swing.JDialog {
 
         secuenciaTextField.setBackground(new java.awt.Color(220, 197, 166));
         secuenciaTextField.setForeground(new java.awt.Color(41, 40, 30));
-        secuenciaTextField.setText("Secuencia Peptidica");
+        secuenciaTextField.setText("Secuencia");
+        secuenciaTextField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                secuenciaTextFieldFocusGained(evt);
+            }
+        });
         secuenciaTextField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 secuenciaTextFieldMouseClicked(evt);
@@ -118,6 +128,11 @@ public class AddPeptidoDialog extends javax.swing.JDialog {
         pesoTextField.setBackground(new java.awt.Color(220, 197, 166));
         pesoTextField.setForeground(new java.awt.Color(41, 40, 30));
         pesoTextField.setText("Peso Molecular");
+        pesoTextField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                pesoTextFieldFocusGained(evt);
+            }
+        });
         pesoTextField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pesoTextFieldMouseClicked(evt);
@@ -132,6 +147,11 @@ public class AddPeptidoDialog extends javax.swing.JDialog {
         cargaTextField.setBackground(new java.awt.Color(220, 197, 166));
         cargaTextField.setForeground(new java.awt.Color(41, 40, 30));
         cargaTextField.setText("Carga Neta");
+        cargaTextField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                cargaTextFieldFocusGained(evt);
+            }
+        });
         cargaTextField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 cargaTextFieldMouseClicked(evt);
@@ -146,6 +166,11 @@ public class AddPeptidoDialog extends javax.swing.JDialog {
         hidrofobicidadTextField.setBackground(new java.awt.Color(220, 197, 166));
         hidrofobicidadTextField.setForeground(new java.awt.Color(41, 40, 30));
         hidrofobicidadTextField.setText("Coeficiente de Hidrofobicidad");
+        hidrofobicidadTextField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                hidrofobicidadTextFieldFocusGained(evt);
+            }
+        });
         hidrofobicidadTextField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 hidrofobicidadTextFieldMouseClicked(evt);
@@ -161,7 +186,7 @@ public class AddPeptidoDialog extends javax.swing.JDialog {
 
         stateComboBoxLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         stateComboBoxLabel.setForeground(new java.awt.Color(41, 40, 30));
-        stateComboBoxLabel.setText("Estado de Verificacion");
+        stateComboBoxLabel.setText("Estado de Verificación");
 
         stateComboBox.setBackground(new java.awt.Color(220, 197, 166));
         stateComboBox.setForeground(new java.awt.Color(41, 40, 30));
@@ -310,27 +335,19 @@ public class AddPeptidoDialog extends javax.swing.JDialog {
     }//GEN-LAST:event_nameTextFieldActionPerformed
 
     private void nameTextFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nameTextFieldMouseClicked
-        if("Nombre del peptido".equals(nameTextField.getText())){
-            nameTextField.setText("");
-        }
+        
     }//GEN-LAST:event_nameTextFieldMouseClicked
 
     private void secuenciaTextFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_secuenciaTextFieldMouseClicked
-        if("Secuencia Peptidica".equals(secuenciaTextField.getText())){
-            secuenciaTextField.setText("");
-        }
+        
     }//GEN-LAST:event_secuenciaTextFieldMouseClicked
 
     private void pesoTextFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pesoTextFieldMouseClicked
-        if("Peso Molecular".equals(pesoTextField.getText())){
-            pesoTextField.setText("");
-        }
+        
     }//GEN-LAST:event_pesoTextFieldMouseClicked
 
     private void cargaTextFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cargaTextFieldMouseClicked
-        if("Carga Neta".equals(cargaTextField.getText())){
-            cargaTextField.setText("");
-        }
+        
     }//GEN-LAST:event_cargaTextFieldMouseClicked
 
     private void hidrofobicidadTextFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hidrofobicidadTextFieldMouseClicked
@@ -380,6 +397,36 @@ public class AddPeptidoDialog extends javax.swing.JDialog {
     private void naturalCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_naturalCheckBoxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_naturalCheckBoxActionPerformed
+
+    private void nameTextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nameTextFieldFocusGained
+        if("Nombre del peptido".equals(nameTextField.getText())){
+            nameTextField.setText("");
+        }
+    }//GEN-LAST:event_nameTextFieldFocusGained
+
+    private void secuenciaTextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_secuenciaTextFieldFocusGained
+        if("Secuencia Peptidica".equals(secuenciaTextField.getText())){
+            secuenciaTextField.setText("");
+        }
+    }//GEN-LAST:event_secuenciaTextFieldFocusGained
+
+    private void pesoTextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pesoTextFieldFocusGained
+        if("Peso Molecular".equals(pesoTextField.getText())){
+            pesoTextField.setText("");
+        }
+    }//GEN-LAST:event_pesoTextFieldFocusGained
+
+    private void cargaTextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cargaTextFieldFocusGained
+        if("Carga Neta".equals(cargaTextField.getText())){
+            cargaTextField.setText("");
+        }
+    }//GEN-LAST:event_cargaTextFieldFocusGained
+
+    private void hidrofobicidadTextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_hidrofobicidadTextFieldFocusGained
+        if("Coeficiente de Hidrofobicidad".equals(hidrofobicidadTextField.getText())){
+            hidrofobicidadTextField.setText("");
+        }
+    }//GEN-LAST:event_hidrofobicidadTextFieldFocusGained
 
     /**
      * @param args the command line arguments

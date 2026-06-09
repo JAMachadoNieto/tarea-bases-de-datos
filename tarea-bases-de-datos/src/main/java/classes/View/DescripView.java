@@ -32,10 +32,10 @@ public class DescripView extends javax.swing.JFrame {
         this.user = user;
         
         if("consultor".equals(user)){
-            tittleLabel.setText("   Visualizador de Datos de Peptidos");
+            tittleLabel.setText("   Visualizador de Datos de Péptidos");
             addButton.setVisible(false);
         } else {
-            tittleLabel.setText("   Editor de datos de Peptidos");
+            tittleLabel.setText("   Editor de datos de Péptidos");
         }
         
         Icon  i = addButton.getIcon();
@@ -71,7 +71,7 @@ public class DescripView extends javax.swing.JFrame {
         TopPanel.setBackground(new java.awt.Color(231, 212, 187));
 
         tittleLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        tittleLabel.setText("   Visualizador de Datos de Peptidos");
+        tittleLabel.setText("   Visualizador de Datos de Péptidos");
 
         addButton.setBackground(new java.awt.Color(231, 212, 187));
         addButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add_icon_no_bg.png"))); // NOI18N
@@ -110,7 +110,7 @@ public class DescripView extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "id", "Nombre", "Secuencia", "Longitud", "Peso", "Carga Neta", "Hidrofobicidad", "Es Natural", "Estado de Verificacion", "Organismo Fuente"
+                "id", "Nombre", "Secuencia", "Longitud", "Peso", "Carga Neta", "Hidrofobicidad", "Es Natural", "Estado de Verificación", "Organismo Fuente"
             }
         ) {
             Class[] types = new Class [] {
@@ -174,7 +174,7 @@ public class DescripView extends javax.swing.JFrame {
         model.setColumnIdentifiers(new Object[]{
             "ID", "Secuencia", "Nombre", "Longitud",
             "Peso molecular", "Carga neta", "Hidrofobicidad",
-            "Natural", "Verificación", "Organismo fuente"
+            "Natural", "Estado de verificación", "Organismo fuente"
         });
 
         for (Peptido p : pepList) {

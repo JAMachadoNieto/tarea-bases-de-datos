@@ -108,7 +108,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="24" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="   Visualizador de Datos de Peptidos"/>
+                <Property name="text" type="java.lang.String" value="   Visualizador de Datos de P&#xe9;ptidos"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JToggleButton" name="addButton">
@@ -153,7 +153,7 @@
                     <Column editable="true" title="Carga Neta" type="java.lang.Integer"/>
                     <Column editable="true" title="Hidrofobicidad" type="java.lang.Double"/>
                     <Column editable="true" title="Es Natural" type="java.lang.Boolean"/>
-                    <Column editable="true" title="Estado de Verificacion" type="java.lang.String"/>
+                    <Column editable="true" title="Estado de Verificaci&#xf3;n" type="java.lang.String"/>
                     <Column editable="true" title="Organismo Fuente" type="java.lang.String"/>
                   </Table>
                 </Property>

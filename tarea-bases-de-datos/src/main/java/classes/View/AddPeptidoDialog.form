@@ -172,7 +172,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Introduzca la informacion del nuevo peptido"/>
+            <Property name="text" type="java.lang.String" value="Introduzca la informaci&#xf3;n del nuevo p&#xe9;ptido"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="nameTextFieldLabel">
@@ -194,9 +194,10 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="1e" green="28" red="29" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Nombre del peptido"/>
+            <Property name="text" type="java.lang.String" value="Nombre del p&#xe9;ptido"/>
           </Properties>
           <Events>
+            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="nameTextFieldFocusGained"/>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="nameTextFieldMouseClicked"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nameTextFieldActionPerformed"/>
           </Events>
@@ -220,9 +221,10 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="1e" green="28" red="29" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Secuencia Peptidica"/>
+            <Property name="text" type="java.lang.String" value="Secuencia"/>
           </Properties>
           <Events>
+            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="secuenciaTextFieldFocusGained"/>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="secuenciaTextFieldMouseClicked"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="secuenciaTextFieldActionPerformed"/>
           </Events>
@@ -249,6 +251,7 @@
             <Property name="text" type="java.lang.String" value="Peso Molecular"/>
           </Properties>
           <Events>
+            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="pesoTextFieldFocusGained"/>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pesoTextFieldMouseClicked"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pesoTextFieldActionPerformed"/>
           </Events>
@@ -275,6 +278,7 @@
             <Property name="text" type="java.lang.String" value="Carga Neta"/>
           </Properties>
           <Events>
+            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="cargaTextFieldFocusGained"/>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="cargaTextFieldMouseClicked"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cargaTextFieldActionPerformed"/>
           </Events>
@@ -301,6 +305,7 @@
             <Property name="text" type="java.lang.String" value="Coeficiente de Hidrofobicidad"/>
           </Properties>
           <Events>
+            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="hidrofobicidadTextFieldFocusGained"/>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="hidrofobicidadTextFieldMouseClicked"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="hidrofobicidadTextFieldActionPerformed"/>
           </Events>
@@ -330,7 +335,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="1e" green="28" red="29" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Estado de Verificacion"/>
+            <Property name="text" type="java.lang.String" value="Estado de Verificaci&#xf3;n"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JComboBox" name="stateComboBox">
