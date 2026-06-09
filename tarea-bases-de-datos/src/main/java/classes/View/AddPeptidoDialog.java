@@ -341,26 +341,36 @@ public class AddPeptidoDialog extends javax.swing.JDialog {
 
     private void confirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmButtonActionPerformed
         Peptido newPep = null;
-        try{
-            newPep = new Peptido(secuenciaTextField.getText(),
-                nameTextField.getText(),
-                Double.parseDouble(pesoTextField.getText()),
-                Integer.parseInt(cargaTextField.getText()),
-                Double.parseDouble(hidrofobicidadTextField.getText()),
-                naturalCheckBox.isSelected(),
-                states.get(stateComboBox.getSelectedIndex()),
-                (organismoComboBox.getSelectedIndex()+1) + ""
-            );
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, e.getMessage(), "Error de formato", JOptionPane.ERROR_MESSAGE);
-        }
-        try {
-            dbMan.ExecuteInsertQuery(newPep);
-            this.dispose();
-        } catch (SQLException e){
-            JOptionPane.showMessageDialog(this, e.getMessage(), "Error de Inserción", JOptionPane.ERROR_MESSAGE);
-        }
         
+        String name = nameTextField.getText();
+        
+        if("".equals(name)){
+            JOptionPane.showMessageDialog(this, "El nombre no puede estar vacío", "Null Error", JOptionPane.ERROR_MESSAGE);
+        } else {
+            try{
+                String secuencia = secuenciaTextField.getText();
+                double peso = Double.parseDouble(pesoTextField.getText());
+                int carga = Integer.parseInt(cargaTextField.getText());
+                double hidro = Double.parseDouble(hidrofobicidadTextField.getText());
+                boolean is = naturalCheckBox.isSelected();
+                String state = states.get(stateComboBox.getSelectedIndex());
+                String org = (organismoComboBox.getSelectedIndex()+1) + "";
+                
+                newPep = new Peptido(
+                    secuencia, name, peso, carga,
+                    hidro, is, state, org
+                );
+                
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(this, e.getMessage(), "Error de formato", JOptionPane.ERROR_MESSAGE);
+            }
+            try {
+                dbMan.ExecuteInsertQuery(newPep);
+                this.dispose();
+            } catch (SQLException e){
+                JOptionPane.showMessageDialog(this, e.getMessage(), "Error de Inserción", JOptionPane.ERROR_MESSAGE);
+            }
+        }
     }//GEN-LAST:event_confirmButtonActionPerformed
 
     private void organismoComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organismoComboBoxActionPerformed
